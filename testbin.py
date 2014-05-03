@@ -1,3 +1,17 @@
+TEST CHANGE HAHAHALKHDSFASJDF;LKDSAJFDSAF
+ASDLKFJLSAJFD
+DSAF
+SAD
+FDSA
+F
+DSAF
+DSAG
+DSAG
+DSAF
+SADG
+EW
+GFW
+
 # We want a function which will take a list, and output a list of all possible sublists.
 
 #check if OTHER is a sublist of SELF
@@ -39,3 +53,4 @@ def PowerSet(inlist):
 		outlist.append(templist)
 	return outlist
 		
+	
