@@ -1,0 +1,61 @@
+INTRODUCTION
+------------------------
+These are a couple libraries that implement some abstract algebra concepts: Permutations as products of cycles and finite binary groups. This is released under GPL, take it and do whatever you please with it.
+
+
+IMPORTANT THEOREMS
+------------------------
+Representation of a permutation as a product of DISJOINT CYCLES is UNIQUE
+	- Representation as a product of TRANSPOSITIONS is NOT UNIQUE
+	
+
+FILE PURPOSES
+------------------------
+permutations.py:
+
+	Contains the 'cycle' class, which only has methods for equality check '==' and 'func(x)' which outputs the cycle's action on x (ex. cycle(123) has func(1)=2, func(2)=3 ).
+		Note that to create a product of cycles, you must put multiple cycles into a permutation.
+		To return the mapping of a cycle, use 'instance.cycle' where instance is the variable name of your cycle.
+	Contains the 'permutation' class, which is a product (list) of cycles.
+		permutation class methods:
+			Equality, Multiplication (function composition), and func(x) (similar to in cycle class)
+		instance.disjoint gives the permutation represented as a product of disjoint cycles (which is unique)
+	
+groups.py:
+
+	Contains this 'BinaryGroup' class, which pairs a set with an operation and checks if it is a group and if it is cyclic
+	Useful Class Variables:
+		instance.Domain returns the list you gave for the Domain
+		instance.Operation is similar
+		instance.GroupOrder returns the size of the domain
+		instance.identity returns the identity
+		instance.isgroup returns a bool telling you if the set is a group under the operation
+		instance.iscyclic returns a bool telling you if the group is cyclic
+		instance.Orders returns a dictionary (mapping) of each element and it's order.
+
+	Methods:
+		== check returns true if two groups are isomorphic
+		< check returns true if one domain is a subgroup of the other
+		+ adding two groups returns the direct external product group
+		
+
+examples.py:
+
+	Contains various functions and sets to be used as arguments for BinaryGroup.
+		D4 is the Dihedral Group of order 4
+		R4 is the rotational subset of D4
+		Perm_Groups is a dictionary with string keys 'SN' where N is a natural.
+	These objects are only sets (lists in python), to call them as a group you must call them as a BinaryGroup class with multiplication as the function (__mul__ is defined as function composition for cycles/permutations)
+	ex:
+	>>>a = BinaryGroup(D4,multiplication)
+	>>>a.isgroup
+	True
+
+front.py:
+
+	Contains helper functions for the (to be built) GUI,
+		string2perm(str) returns a permutation object based on a string of the form '(123)(235)' or '(1,2,3)(2,3,5)'
+
+gui.py:
+
+	The GUI, currently non-functional.
