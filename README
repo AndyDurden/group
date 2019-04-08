@@ -3,6 +3,15 @@ INTRODUCTION
 These are a couple libraries that implement some abstract algebra concepts: Permutations as products of cycles and finite binary groups.	
 
 
+IMPORTANT THEOREMS
+------------------------
+Representation of a permutation as a product of disjoint cycles is unique.
+	- Representation as a product of tranpositions is not unique.
+
+All binary groups are isomorphic to a subset of a permutation group.
+
+
+
 FILE PURPOSES
 ------------------------
 permutations.py:
