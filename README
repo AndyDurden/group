@@ -1,13 +1,7 @@
 INTRODUCTION
 ------------------------
-These are a couple libraries that implement some abstract algebra concepts: Permutations as products of cycles and finite binary groups. This is released under GPL, take it and do whatever you please with it.
+These are a couple libraries that implement some abstract algebra concepts: Permutations as products of cycles and finite binary groups.	
 
-
-IMPORTANT THEOREMS
-------------------------
-Representation of a permutation as a product of DISJOINT CYCLES is UNIQUE
-	- Representation as a product of TRANSPOSITIONS is NOT UNIQUE
-	
 
 FILE PURPOSES
 ------------------------
@@ -25,13 +19,13 @@ groups.py:
 
 	Contains this 'BinaryGroup' class, which pairs a set with an operation and checks if it is a group and if it is cyclic
 	Useful Class Variables:
-		instance.Domain returns the list you gave for the Domain
+		instance.Domain returns the set input for the Domain
 		instance.Operation is similar
 		instance.GroupOrder returns the size of the domain
-		instance.identity returns the identity
-		instance.isgroup returns a bool telling you if the set is a group under the operation
-		instance.iscyclic returns a bool telling you if the group is cyclic
-		instance.Orders returns a dictionary (mapping) of each element and it's order.
+		instance.identity returns the identity of the group
+		instance.isgroup returns bool determining if the set is a group under the operation
+		instance.iscyclic returns bool determining if the group is cyclic
+		instance.Orders returns a dictionary mapping of each element and its order.
 
 	Methods:
 		== check returns true if two groups are isomorphic
@@ -58,4 +52,4 @@ front.py:
 
 gui.py:
 
-	The GUI, currently non-functional.
+	Prototype GUI, currently non-functional.
